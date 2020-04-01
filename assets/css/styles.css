@@ -1,21 +1,16 @@
 html {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', serif;
 }
 
-body
-{
-    padding-top: 0!important;
+body {
+    padding-top: 0 !important;
     color: #ecdfce;
-    font-size : 13px;
+    font-size: 13px;
     background-image: url(fond.jpg);
-    background-color : #0f1c1e !important;
+    background-color: #0f1c1e !important;
     background-repeat: no-repeat;
     background-position: center 0px;
     margin: 0;
-}
-
-div {
-    display: block;
 }
 
 img {
@@ -26,26 +21,28 @@ img {
 }
 
 #banner {
+    display: inline;
     font-size: x-large;
-    position : relative;
-    z-index : 5;
-    height: 112px;
-    width: 855px;
+    height: 5%;
+    max-height: 5%;
+    width: 70%;
+    max-width: 70%;
     text-align: center;
 }
 
 #catch1 {
+    margin-bottom: -1%;
     font-size: large;
-    font-family: "Montserrat";
+    font-family: "Montserrat Light", serif;
 }
 
 #catch2 {
     font-size: large;
-    font-family: "Montserrat";
+    font-family: "Montserrat ExtraLight", serif;
 }
 
 .reseau-barre {
-    height: 37px;
+    height: 3%;
     top: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     z-index: 10000000000;
@@ -67,14 +64,48 @@ img {
     color: #55a480;
 }
 
-.container {
-    margin-top: 0;
-    width: 100%;
-    padding: 0;
-    display: block;
-    box-sizing: border-box;
-}
-
 .socialmedia {
     max-height: 26px;
+}
+
+/* --- Divs principaux --- */
+.navbar {
+    display: block;
+    margin-left: 25%;
+    width: 35%;
+    max-width: 35%;
+    height: 6%;
+    max-height: 6%;
+    margin-top: 10%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.main-content {
+    display: block;
+    align-content: center;
+    max-width: 50%;
+    width: 50%;
+    margin: auto;
+    margin-top: 0.5%;
+    margin-bottom: 10%;
+    padding: 1%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.divfeed {
+    display: block;
+    align-self: center;
+    margin: auto;
+    margin-top: 15%;
+    width: 80%;
+    max-width: 80%;
+    height: 80%;
+    max-height: 80%;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.4);
 }
