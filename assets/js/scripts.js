@@ -32,10 +32,11 @@ function createPost(dataPost, i) {
 
     name.textContent = dataPost.name;
 
-    img.style.maxWidth = "5%";
+    img.style.maxWidth = "7%";
+    img.style.minWidth = "7%";
+    img.style.width = "7%";
+    img.style.resize = "none";
     img.src = `includes/images/imgs-classes/${i}.png`;
-
-    specs.textContent = "Test";
 
     classe.appendChild(nameimgdiv);
     classe.appendChild(specsdiv);
@@ -48,11 +49,50 @@ function createPost(dataPost, i) {
 
 function handleData(data) {
     const feed = document.querySelector('.divfeed');
+    let sp2 = document.querySelector('.button-display');
     console.log(data);
     data.results.forEach((classe, i) => {
-        feed.appendChild(createPost(classe, i));
+        feed.insertBefore(createPost(classe, i), sp2);
         console.log(classe);
     });
 }
 
+function carousel() {
+    $(document).ready(function () {
+
+        $(".Modern-Slider").slick({
+            autoplay: true,
+            autoplaySpeed: 10000,
+            speed: 900,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            pauseOnHover: false,
+            dots: true,
+            pauseOnDotsHover: true,
+            cssEase: 'linear',
+            fade: true,
+            draggable: false,
+            prevArrow: '<button class="PrevArrow"></button>',
+            nextArrow: '<button class="NextArrow"></button>',
+        });
+
+    })
+}
+
 fetchAllPosts();
+carousel();
+
+let modal = document.querySelector(".modal");
+let overlay = document.querySelector(".overlay");
+let button = document.querySelector(".overlay");
+
+function buttonFunction(event) {
+    event.preventDefault();
+    modal.classList.add("is-active");
+}
+
+function overlayFunction(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    modal.classList.remove("is-active");
+}
