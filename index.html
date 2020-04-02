@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="assets/css/styles.css?v=1.0">
     <link rel="stylesheet" media="screen and (max-width: 1280px)" href="assets/css/petite_resolution.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 </head>
@@ -39,14 +42,99 @@
     </div>
 </header>
 <main>
-    <div class="navbar">
+    <div class="Modern-Slider">
+        <div class="item">
+            <div class="img-fill">
+                <img src="./includes/images/slider/15361.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-fill">
+                <img src="./includes/images/slider/11132.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-fill">
+                <img src="./includes/images/slider/19059.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="img-fill">
+                <img src="./includes/images/slider/976234.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id='navbar'>
+        <ul id='ulnav'>
+            <li><a href='#'>A PROPOS</a>
+
+            </li>
+            <li><a href='#'>JEUX</a>
+
+                <ul>
+                    <li><a href='#'>World of Warcraft</a>
+                    </li>
+                    <li><a href='#'>The Witcher III</a>
+                    </li>
+                    <li><a href='#'>Red Dead Redemption 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='#'>GALLERIE</a>
+
+            </li>
+            <li><a href='#'>CONTACT</a>
+
+            </li>
+        </ul>
     </div>
     <div class="main-content">
+        <p class="introtxt">Chevalier en armure de plaques étincelante ou lanceur de sorts en robe aux couleurs
+            bigarrées ? <br> Le choix est
+            vaste ! Chaque classe pose un défi différent et répond à des mécaniques de jeu
+            spécifiques. <br>Quelle est votre vocation ?</p>
         <div class="divfeed" id="divfeed">
-
+            <div class="button-display">
+                <a href="javascript:" class="display" onclick="buttonFunction(event)">
+                    <svg class="icon-arrow before">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                    <span class="label">Créez votre classe !</span>
+                    <svg class="icon-arrow after">
+                        <use xlink:href="#arrow"></use>
+                    </svg>
+                </a>
+                <svg style="display: none;">
+                    <defs>
+                        <symbol id="arrow" viewBox="0 0 35 15">
+                            <title>Arrow</title>
+                            <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
+                        </symbol>
+                    </defs>
+                </svg>
+            </div>
+            <div onclick="buttonFunction(event)"></div>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="modal">
+                        <form>
+                            <input type="text" name="classname" placeholder="Nom de la classe"
+                                   onfocus="this.placeholder = ''"
+                                   onblur="this.placeholder = 'Nom de la classe'">
+                            <input type="text" name="imgurl" placeholder="URL de l'image"
+                                   onfocus="this.placeholder = ''"
+                                   onblur="this.placeholder = 'URL de l\'image'">
+                            <input class="button" type="submit" value="Créer">
+                        </form>
+                        <p onclick="overlayFunction(event)" class="close">Close</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
+<script src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="assets/js/scripts.js"></script>
 </body>
 </html>
