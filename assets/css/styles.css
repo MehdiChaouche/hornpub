@@ -1,5 +1,6 @@
 html {
     font-family: 'Montserrat', serif;
+    overflow-y: auto;
 }
 
 body {
@@ -241,6 +242,7 @@ img {
 .Modern-Slider .slick-dots li {
     float: left;
     width: 0px;
+    margin: auto;
     height: 5px;
     background: #d62828;
     position: absolute;
