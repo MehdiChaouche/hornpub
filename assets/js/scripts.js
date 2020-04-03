@@ -57,6 +57,41 @@ function handleData(data) {
     });
 }
 
+function createnewClass(newclasse) {
+    const feed = document.querySelector('.divfeed');
+    document.querySelector('#myform').addEventListener("submit", function (event) {
+        event.preventDefault();
+        const newclasse = document.createElement('div');
+        const nameimgdivnew = document.createElement('div');
+        const newname = document.createElement('h3');
+        const newimg = document.createElement('img');
+        newclasse.style.borderRadius = "5px";
+        newclasse.style.margin = "5px 0";
+        newclasse.style.padding = "5px";
+        newclasse.style.maxWidth = "95%";
+        newclasse.style.marginLeft = "1%";
+        newclasse.style.marginBottom = "3%";
+        newclasse.style.marginTop = "3%";
+        newclasse.style.backgroundColor = "rgba(141, 166, 255, 0.19)";
+        nameimgdivnew.style.display = "flex";
+        nameimgdivnew.style.justifyContent = "space-center";
+        newname.textContent = $(".classname").val();
+        newimg.src = $(".imgurl").val();
+        newimg.style.maxWidth = "7%";
+        newimg.style.minWidth = "7%";
+        newimg.style.width = "7%";
+        newimg.style.resize = "none";
+
+        newclasse.appendChild(nameimgdivnew);
+        nameimgdivnew.appendChild(newimg);
+        nameimgdivnew.appendChild(newname);
+        return newclasse;
+    });
+    document.querySelector('#myform').addEventListener("submit", function (event) {
+        feed.appendChild(createnewClass(newclasse));
+    });
+}
+
 function carousel() {
     $(document).ready(function () {
 
@@ -81,6 +116,7 @@ function carousel() {
 
 fetchAllPosts();
 carousel();
+createnewClass();
 
 let modal = document.querySelector(".modal");
 let overlay = document.querySelector(".overlay");
