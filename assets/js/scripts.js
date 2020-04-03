@@ -57,8 +57,9 @@ function handleData(data) {
     });
 }
 
-function createnewClass(newclasse) {
+function createnewClass() {
     const feed = document.querySelector('.divfeed');
+    let sp2 = document.querySelector('.button-display');
     document.querySelector('#myform').addEventListener("submit", function (event) {
         event.preventDefault();
         const newclasse = document.createElement('div');
@@ -85,10 +86,7 @@ function createnewClass(newclasse) {
         newclasse.appendChild(nameimgdivnew);
         nameimgdivnew.appendChild(newimg);
         nameimgdivnew.appendChild(newname);
-        return newclasse;
-    });
-    document.querySelector('#myform').addEventListener("submit", function (event) {
-        feed.appendChild(createnewClass(newclasse));
+        feed.insertBefore(createnewClass(newclasse), sp2);
     });
 }
 
