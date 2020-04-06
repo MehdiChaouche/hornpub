@@ -16,6 +16,7 @@ function createPost(dataPost, i) {
     const specsdiv = document.createElement('div');
     const specs = document.createElement('p');
 
+    classe.className = "divclasse";
     classe.id = `classeperso-${i}`;
     classe.style.borderRadius = "5px";
     classe.style.margin = "5px 0";
@@ -30,7 +31,7 @@ function createPost(dataPost, i) {
     specsdiv.style.margin = "0 auto";
     specsdiv.style.width = "100%";
 
-    name.textContent = dataPost.name;
+    name.textContent = dataPost.name || document.querySelector(".classname").value;
 
     img.style.maxWidth = "7%";
     img.style.minWidth = "7%";
@@ -50,45 +51,44 @@ function createPost(dataPost, i) {
 function handleData(data) {
     const feed = document.querySelector('.divfeed');
     let sp2 = document.querySelector('.button-display');
-    console.log(data);
     data.results.forEach((classe, i) => {
         feed.insertBefore(createPost(classe, i), sp2);
         console.log(classe);
     });
 }
 
-function createnewClass() {
-    const feed = document.querySelector('.divfeed');
-    let sp2 = document.querySelector('.button-display');
-    document.querySelector('#myform').addEventListener("submit", function (event) {
-        event.preventDefault();
-        const newclasse = document.createElement('div');
-        const nameimgdivnew = document.createElement('div');
-        const newname = document.createElement('h3');
-        const newimg = document.createElement('img');
-        newclasse.style.borderRadius = "5px";
-        newclasse.style.margin = "5px 0";
-        newclasse.style.padding = "5px";
-        newclasse.style.maxWidth = "95%";
-        newclasse.style.marginLeft = "1%";
-        newclasse.style.marginBottom = "3%";
-        newclasse.style.marginTop = "3%";
-        newclasse.style.backgroundColor = "rgba(141, 166, 255, 0.19)";
-        nameimgdivnew.style.display = "flex";
-        nameimgdivnew.style.justifyContent = "space-center";
-        newname.textContent = $(".classname").val();
-        newimg.src = $(".imgurl").val();
-        newimg.style.maxWidth = "7%";
-        newimg.style.minWidth = "7%";
-        newimg.style.width = "7%";
-        newimg.style.resize = "none";
-
-        newclasse.appendChild(nameimgdivnew);
-        nameimgdivnew.appendChild(newimg);
-        nameimgdivnew.appendChild(newname);
-        feed.insertBefore(createnewClass(newclasse), sp2);
-    });
-}
+// function createnewClass() {
+//     const feed = document.querySelector('.divfeed');
+//     let sp2 = document.querySelector('.button-display');
+//     document.querySelector('#myform').addEventListener("submit", function (event) {
+//         event.preventDefault();
+//         const newclasse = document.createElement('div');
+//         const nameimgdivnew = document.createElement('div');
+//         const newname = document.createElement('h3');
+//         const newimg = document.createElement('img');
+//         newclasse.style.borderRadius = "5px";
+//         newclasse.style.margin = "5px 0";
+//         newclasse.style.padding = "5px";
+//         newclasse.style.maxWidth = "95%";
+//         newclasse.style.marginLeft = "1%";
+//         newclasse.style.marginBottom = "3%";
+//         newclasse.style.marginTop = "3%";
+//         newclasse.style.backgroundColor = "rgba(141, 166, 255, 0.19)";
+//         nameimgdivnew.style.display = "flex";
+//         nameimgdivnew.style.justifyContent = "space-center";
+//         newname.textContent = $(".classname").val();
+//         newimg.src = $(".imgurl").val();
+//         newimg.style.maxWidth = "7%";
+//         newimg.style.minWidth = "7%";
+//         newimg.style.width = "7%";
+//         newimg.style.resize = "none";
+//
+//         newclasse.appendChild(nameimgdivnew);
+//         nameimgdivnew.appendChild(newimg);
+//         nameimgdivnew.appendChild(newname);
+//         feed.insertBefore(createnewClass(newclasse), sp2);
+//     });
+// }
 
 function carousel() {
     $(document).ready(function () {
@@ -114,7 +114,6 @@ function carousel() {
 
 fetchAllPosts();
 carousel();
-createnewClass();
 
 let modal = document.querySelector(".modal");
 let overlay = document.querySelector(".overlay");
@@ -130,3 +129,20 @@ function overlayFunction(event) {
     event.stopImmediatePropagation();
     modal.classList.remove("is-active");
 }
+
+let postClass = document.querySelector('.button');
+
+postClass.addEventListener('click', function () {
+    event.preventDefault();
+    let random_images_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    let num = Math.floor(Math.random() * random_images_array.length);
+    let i = random_images_array[num];
+    let feed = document.querySelector(".divfeed");
+    let dataPost = document.querySelector(".classname").value;
+    let sp2 = document.querySelector('.button-display');
+    console.log(dataPost);
+
+    let createClass = createPost(dataPost, i);
+    console.log(createClass);
+    feed.insertBefore(createClass, sp2);
+});
