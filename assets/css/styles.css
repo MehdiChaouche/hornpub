@@ -192,16 +192,13 @@ img {
     width: 45px;
     height: 45px;
     background: rgba(0, 0, 0, .50);
+    background-image: url("next.svg");
     border: 0 none;
     margin-top: -22.5px;
     text-align: center;
     font: 20px/45px FontAwesome;
     color: #FFF;
     z-index: 5;
-}
-
-.Modern-Slider .NextArrow:before {
-    content: '\f105';
 }
 
 .Modern-Slider .PrevArrow {
@@ -211,16 +208,13 @@ img {
     width: 45px;
     height: 45px;
     background: rgba(0, 0, 0, .50);
+    background-image: url("back.svg");
     border: 0 none;
     margin-top: -22.5px;
     text-align: center;
     font: 20px/45px FontAwesome;
     color: #FFF;
     z-index: 5;
-}
-
-.Modern-Slider .PrevArrow:before {
-    content: '\f104';
 }
 
 .Modern-Slider .slick-dots {
