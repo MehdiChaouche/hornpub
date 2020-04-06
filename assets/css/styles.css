@@ -365,8 +365,8 @@ img {
     height: auto;
     border: 1px solid transparent
 }
-/* === Fin Carousel  === */
 
+/* === Fin Carousel  === */
 
 
 /*!* === Menu Dropdown === *!*/
@@ -547,24 +547,59 @@ a.display:active .icon-arrow {
     fill: #FD6154;
 }
 
-.twelve { width: 100%; }
-.eleven { width: 91.53%; }
-.ten { width: 83.06%; }
-.nine { width: 74.6%; }
-.eight { width: 66.13%; }
-.seven { width: 57.66%; }
-.six { width: 49.2%; }
-.five { width: 40.73%; }
-.four { width: 32.26%; }
-.three { width: 23.8%; }
-.two { width: 15.33%; }
-.one { width: 6.866%; }
+.twelve {
+    width: 100%;
+}
+
+.eleven {
+    width: 91.53%;
+}
+
+.ten {
+    width: 83.06%;
+}
+
+.nine {
+    width: 74.6%;
+}
+
+.eight {
+    width: 66.13%;
+}
+
+.seven {
+    width: 57.66%;
+}
+
+.six {
+    width: 49.2%;
+}
+
+.five {
+    width: 40.73%;
+}
+
+.four {
+    width: 32.26%;
+}
+
+.three {
+    width: 23.8%;
+}
+
+.two {
+    width: 15.33%;
+}
+
+.one {
+    width: 6.866%;
+}
 
 /* COLUMNS */
 
 .col {
     display: block;
-    float:left;
+    float: left;
     margin: 1% 0 1% 1.6%;
 }
 
@@ -572,7 +607,7 @@ a.display:active .icon-arrow {
     margin-left: 0;
 }
 
-.container{
+.container {
     width: 100%;
     height: 100%;
     max-width: 940px;
@@ -598,7 +633,7 @@ a.display:active .icon-arrow {
 
 /* WRAPPER */
 
-.wrapper{
+.wrapper {
     position: absolute;
     width: 100%;
     top: 0;
@@ -611,23 +646,23 @@ a.display:active .icon-arrow {
 
 /* OVERLAY */
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.overlay.overlay-modal-showing{
-    background-color: rgba(0,0,0,0.6);
+.overlay.overlay-modal-showing {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* BUTTON */
 
-.button, .submit{
+.button, .submit {
     outline: none;
     border: 2px solid #d62828;
     border-radius: 15px;
@@ -640,7 +675,7 @@ a.display:active .icon-arrow {
     transition: all 0.3s ease-in-out;
 }
 
-.button.button-modal-showing{
+.button.button-modal-showing {
     width: 100%;
     cursor: auto;
     padding: 18px;
@@ -648,11 +683,11 @@ a.display:active .icon-arrow {
 
 /* MODAL */
 
-.modal form .submit{
+.modal form .submit {
     margin-top: 20px;
 }
 
-.modal{
+.modal {
     background-color: transparent;
     padding: 20px;
     opacity: 0;
@@ -667,7 +702,7 @@ a.display:active .icon-arrow {
     transform-origin: top left;
 }
 
-.modal.is-active{
+.modal.is-active {
     opacity: 1;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -682,13 +717,13 @@ a.display:active .icon-arrow {
     font-family: Montserrat serif;
 }
 
-.modal form input{
+.modal form input {
     display: block;
     margin: 15px auto;
     font-family: Montserrat serif;
 }
 
-.modal form input[type="text"], .modal form input[type="email"], .modal form input[type="password"]{
+.modal form input[type="text"], .modal form input[type="email"], .modal form input[type="password"] {
     border: 1px;
     border-radius: 15px;
     outline: none;
@@ -698,7 +733,7 @@ a.display:active .icon-arrow {
     color: white;
 }
 
-.close{
+.close {
     color: #aaa;
     cursor: pointer;
     text-align: center;
@@ -706,7 +741,7 @@ a.display:active .icon-arrow {
     font-size: 12px;
 }
 
-.close:hover{
+.close:hover {
     color: #d62828;
 }
 
