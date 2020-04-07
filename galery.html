@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>HornPub - Accueil</title>
+    <title>HornPub - Galerie</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
@@ -89,45 +89,39 @@
         </ul>
     </div>
     <div class="main-content">
-        <p class="introtxt">Chevalier en armure de plaques étincelante ou lanceur de sorts en robe aux couleurs
-            bigarrées ? <br> Le choix est
-            vaste ! Chaque classe pose un défi différent et répond à des mécaniques de jeu
-            spécifiques. <br>Quelle est votre vocation ?</p>
-        <div class="divfeed" id="divfeed">
-            <div class="button-display">
-                <a href="javascript:" class="display" onclick="buttonFunction(event)">
-                    <svg class="icon-arrow before">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                    <span class="label">Créez votre classe !</span>
-                    <svg class="icon-arrow after">
-                        <use xlink:href="#arrow"></use>
-                    </svg>
-                </a>
-                <svg style="display: none;">
-                    <defs>
-                        <symbol id="arrow" viewBox="0 0 35 15">
-                            <title>Arrow</title>
-                            <path d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "/>
-                        </symbol>
-                    </defs>
-                </svg>
+        <div class="buttons-display">
+            <button class="button" id="unecolonne" type="submit" onclick="buttonChangefirst()"></button>
+            <button class="button" id="troiscolonnes" type="submit" onclick="buttonChangesecond()"></button>
+        </div>
+        <div class="divgalery" id="divgalery">
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/illidan.jpg" alt="illidan">
+                </div>
             </div>
-            <div onclick="buttonFunction(event)"></div>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="modal">
-                        <form id="myform">
-                            <input type="text" id="AddTitle" placeholder="Nom de la classe"
-                                   onfocus="this.placeholder = ''"
-                                   onblur="this.placeholder = 'Nom de la classe'">
-                            <!--                            <input type="text" class="imgurl" placeholder="URL de l'image"-->
-                            <!--                                   onfocus="this.placeholder = ''"-->
-                            <!--                                   onblur="this.placeholder = 'URL de l\'image'">-->
-                            <button class="button" type="submit">Créer</button>
-                        </form>
-                        <p onclick="overlayFunction(event)" class="close">Fermer</p>
-                    </div>
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/geralt.png" alt="geralt">
+                </div>
+            </div>
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/arthurmorgan.png" alt="arthurmorgan">
+                </div>
+            </div>
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/sylvanas.png" alt="sylvanas">
+                </div>
+            </div>
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/geralt2.png" alt="geralttwo">
+                </div>
+            </div>
+            <div class="galerygrid-troiscolonnes">
+                <div class="img-container">
+                    <img src="includes/images/galery/arthurmorgan2.jpg" alt="arthurmorgantwo">
                 </div>
             </div>
         </div>
