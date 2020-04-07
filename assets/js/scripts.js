@@ -35,7 +35,7 @@ if (window.location.pathname !== '/hornpub/galery.html') {
         specsdiv.style.margin = "0 auto";
         specsdiv.style.width = "100%";
 
-        name.textContent = dataPost.name || document.querySelector(".classname").value;
+        name.textContent = dataPost.name || document.querySelector("#AddTitle").value;
 
         img.style.maxWidth = "7%";
         img.style.minWidth = "7%";
@@ -105,39 +105,71 @@ if (window.location.pathname !== '/hornpub/galery.html') {
 
     let postClass = document.querySelector('.button');
 
+    let selector = document.querySelectorAll('#ulnavselector > li > img');
+    let imageid;
+    selector.forEach((element, i) => {
+        element.addEventListener('click', function () {
+            imageid = element.id;
+            let sp2 = document.querySelector('#create');
+            // A CONTINUER.
+            return imageid;
+        })
+    });
+
     postClass.addEventListener('click', function () {
         event.preventDefault();
         let random_images_array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
         let num = Math.floor(Math.random() * random_images_array.length);
-        let i = random_images_array[num];
+        let i = imageid;
+        // === PERMET DE RECUPERER UNE IMAGE RANDOM DU DOSSIER ===
+
         let feed = document.querySelector(".divfeed");
         let dataPost = document.querySelector("#AddTitle").value;
         let sp2 = document.querySelector('.button-display');
         console.log(dataPost);
-
         let createClass = createPost(dataPost, i);
         console.log(createClass);
         feed.insertBefore(createClass, sp2);
     });
-
 }
 
-function buttonChangefirst() {
-    let galerygrid = document.querySelectorAll('.galerygrid-troiscolonnes');
-    console.log(galerygrid);
-    galerygrid.forEach((galerygrid, i) => {
-        galerygrid.classList.replace("galerygrid-troiscolonnes", "galerygrid-unecolonne");
-        console.log(galerygrid);
+// (!) Fonctions boutons display (!)
+
+// function buttonChangefirst() {
+//     let galerygrid = document.querySelectorAll('.galerygrid-troiscolonnes');
+//     console.log(galerygrid);
+//     galerygrid.forEach((galerygrid, i) => {
+//         galerygrid.classList.replace("galerygrid-troiscolonnes", "galerygrid-unecolonne");
+//         console.log(galerygrid);
+//     });
+//     document.querySelector('.divgalery').style.overflow = "scroll";
+// }
+//
+// function buttonChangesecond() {
+//     let galerygrid = document.querySelectorAll('.galerygrid-unecolonne');
+//     console.log(galerygrid);
+//     galerygrid.forEach((galerygrid, i) => {
+//         galerygrid.classList.replace("galerygrid-unecolonne", "galerygrid-troiscolonnes");
+//         console.log(galerygrid);
+//     });
+//     document.querySelector('.divgalery').style.overflow = "hidden";
+// }
+
+
+// si click sur un des buttons-display alors
+
+targets = document.querySelectorAll('.buttons-display > button');
+console.log(targets);
+
+targets.forEach((element, i) => {
+    element.addEventListener('click', function (event) {
+        let images = document.querySelectorAll('.divgalery > div');
+        images.forEach((image, i) => {
+            image.removeAttribute("class");
+            image.classList.add('galerygrid-' + event.target.getAttribute('id'));
+        })
     });
-    document.querySelector('.divgalery').style.overflow = "scroll";
-}
+});
 
-function buttonChangesecond() {
-    let galerygrid = document.querySelectorAll('.galerygrid-unecolonne');
-    console.log(galerygrid);
-    galerygrid.forEach((galerygrid, i) => {
-        galerygrid.classList.replace("galerygrid-unecolonne", "galerygrid-troiscolonnes");
-        console.log(galerygrid);
-    });
-    document.querySelector('.divgalery').style.overflow = "hidden";
-}
+// récupre l'id de l'élément sur lequel on a cliqué
+// remplace la class de toutes les images par .galery-$id

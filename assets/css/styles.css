@@ -793,7 +793,7 @@ a.display:active .icon-arrow {
 /* === GALERIE === */
 
 .galerygrid-troiscolonnes {
-    float: right;
+    float: left;
     position: relative;
     width: 30%;
     padding-bottom: 50%;
@@ -837,4 +837,95 @@ a.display:active .icon-arrow {
     background-position: center;
     padding: 12px 15px;
     background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* === Dropdown Sélection Icône === */
+
+#ulnavnew {
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    padding: 0;
+}
+
+#ulnavnew ul {
+    list-style: none;
+    padding: 0;
+}
+
+#ulnavnew li {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    border-left: 0px solid #333;
+    border-right: 0px solid #333;
+}
+
+#ulnavnew li a, #ulnavnew li a:link, #ulnavnew li a:visited {
+    color: #d62828;
+    display: inline-block;
+    margin: 0;
+    font-weight: bold;
+    text-align: left;
+    padding: 9px 12px 10px 12px;
+    text-decoration: none;
+}
+
+#ulnavnew li a:hover, #ulnavnew li a:active {
+    color: #fdeae9;
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 9px 12px 10px 12px;
+}
+
+#ulnavnew li ul {
+    z-index: 9999;
+    position: absolute;
+    left: -999em;
+    height: auto;
+    width: 100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#ulnavnew li ul a {
+    width: 100px;
+}
+
+#ulnavnew li ul ul {
+    margin: -25px 0 0 161px;
+}
+
+#ulnavnew li:hover ul ul, #ulnavnew li:hover ul ul ul, #ulnavnew li.sfhover ul ul, #ulnavnew li.sfhover ul ul ul {
+    left: -999em;
+}
+
+#ulnavnew li:hover ul, #ulnavnew li li:hover ul, #ulnavnew li li li:hover ul, #ulnavnew li.sfhover ul, #ulnavnew li li.sfhover ul, #ulnavnew li li li.sfhover ul {
+    left: auto;
+}
+
+#ulnavnew li:hover, #ulnavnew li.sfhover {
+    position: static;
+}
+
+#ulnavnew li li a, #ulnavnew li li a:link, #ulnavnew li li a:visited {
+    background: #ffffff;
+    width: 120px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 9px 12px 10px 12px;
+    text-decoration: none;
+    z-index: 9999;
+    border-bottom: 0px dotted #333;
+}
+
+#ulnavnew li li a:hover, #mbwnavli li a:active {
+    background: #ffffff;
+    color: #d62828;
+    display: block;
+    margin: 0 auto;
+    padding: 9px 12px 10px 12px;
+    text-decoration: none;
 }

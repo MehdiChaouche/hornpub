@@ -121,10 +121,26 @@
                             <input type="text" id="AddTitle" placeholder="Nom de la classe"
                                    onfocus="this.placeholder = ''"
                                    onblur="this.placeholder = 'Nom de la classe'">
-                            <!--                            <input type="text" class="imgurl" placeholder="URL de l'image"-->
-                            <!--                                   onfocus="this.placeholder = ''"-->
-                            <!--                                   onblur="this.placeholder = 'URL de l\'image'">-->
-                            <button class="button" type="submit">Créer</button>
+                            <ul id='ulnavnew'>
+                                <li><a>ICÔNE</a>
+
+                                    <ul id="ulnavselector">
+                                        <li><img src="includes/images/imgs-classes/0.png" alt="0.png" id="0">
+                                        </li>
+                                        <li><img src="includes/images/imgs-classes/1.png" alt="1.png" id="1">
+                                        </li>
+                                        <li><<img src="includes/images/imgs-classes/2.png" alt="2.png" id="2">
+                                        </li>
+                                        <li><img src="includes/images/imgs-classes/3.png" alt="3.png" id="3">
+                                        </li>
+                                        <li><img src="includes/images/imgs-classes/4.png" alt="4.png" id="4">
+                                        </li>
+                                        <li><<img src="includes/images/imgs-classes/5.png" alt="5.png" id="5">
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="button" type="submit" id="create">Créer</button>
                         </form>
                         <p onclick="overlayFunction(event)" class="close">Fermer</p>
                     </div>
