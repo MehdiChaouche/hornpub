@@ -173,3 +173,16 @@ targets.forEach((element, i) => {
 
 // récupre l'id de l'élément sur lequel on a cliqué
 // remplace la class de toutes les images par .galery-$id
+
+function GFG_Fun() {
+    let img = document.createElement('img');
+    let galerygriddiv = document.createElement('div');
+    let imgcontainer = document.createElement('div');
+    let inputvalue = document.querySelector('#search').value;
+    galerygriddiv.className = "galerygrid-troiscolonnes";
+    imgcontainer.className = "img-container";
+    img.src = inputvalue;
+    document.querySelector('.divgalery').appendChild(galerygriddiv);
+    galerygriddiv.appendChild(imgcontainer);
+    imgcontainer.appendChild(img);
+}
