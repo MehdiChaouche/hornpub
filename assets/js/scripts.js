@@ -178,11 +178,19 @@ function GFG_Fun() {
     let img = document.createElement('img');
     let galerygriddiv = document.createElement('div');
     let imgcontainer = document.createElement('div');
+    let deletebutton = document.createElement('button');
     let inputvalue = document.querySelector('#search').value;
+    deletebutton.className = "button";
+    deletebutton.textContent = "Supprimer";
     galerygriddiv.className = "galerygrid-troiscolonnes";
     imgcontainer.className = "img-container";
     img.src = inputvalue;
     document.querySelector('.divgalery').appendChild(galerygriddiv);
     galerygriddiv.appendChild(imgcontainer);
     imgcontainer.appendChild(img);
+    imgcontainer.appendChild(deletebutton);
+}
+
+function imgDelete() {
+    target = document.querySelector('')
 }
